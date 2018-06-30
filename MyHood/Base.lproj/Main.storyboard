@@ -132,7 +132,56 @@
                     <view key="view" contentMode="scaleToFill" id="5Eo-3z-sjf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xl-te-bC3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make New Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oec-qG-VpX">
+                                        <rect key="frame" x="126.5" y="37" width="121" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="4L8-f5-VcG"/>
+                                            <constraint firstAttribute="width" constant="121" id="Ps1-wM-a6J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEs-bV-DiU">
+                                        <rect key="frame" x="8" y="25" width="57" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="RpN-vI-Rz9"/>
+                                            <constraint firstAttribute="height" constant="32" id="WTR-G4-1zf"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.52941176469999995" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="JdD-RN-j1O"/>
+                                    <constraint firstAttribute="bottom" secondItem="sEs-bV-DiU" secondAttribute="bottom" constant="8" id="LFw-R6-Z1E"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oec-qG-VpX" secondAttribute="bottom" constant="8" id="VrO-Qy-Hp5"/>
+                                    <constraint firstItem="Oec-qG-VpX" firstAttribute="centerX" secondItem="3Xl-te-bC3" secondAttribute="centerX" id="bm1-qr-PzX"/>
+                                    <constraint firstItem="sEs-bV-DiU" firstAttribute="leading" secondItem="3Xl-te-bC3" secondAttribute="leading" constant="8" id="diA-ig-tkn"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="gU4-lw-WZx">
+                                <rect key="frame" x="67" y="100" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2bl-8X-P4Q"/>
+                                    <constraint firstAttribute="height" constant="240" id="AdL-l7-YWu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Xl-te-bC3" firstAttribute="leading" secondItem="J9Z-Ci-G8J" secondAttribute="leading" id="G1q-Dw-rvi"/>
+                            <constraint firstItem="3Xl-te-bC3" firstAttribute="trailing" secondItem="J9Z-Ci-G8J" secondAttribute="trailing" id="IJs-UO-JZo"/>
+                            <constraint firstItem="gU4-lw-WZx" firstAttribute="top" secondItem="3Xl-te-bC3" secondAttribute="bottom" constant="35" id="Ydm-IK-jYn"/>
+                            <constraint firstItem="gU4-lw-WZx" firstAttribute="centerX" secondItem="5Eo-3z-sjf" secondAttribute="centerX" id="ecp-tu-t29"/>
+                            <constraint firstItem="3Xl-te-bC3" firstAttribute="top" secondItem="5Eo-3z-sjf" secondAttribute="top" id="tB8-dx-gjN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J9Z-Ci-G8J"/>
                     </view>
                 </viewController>
@@ -143,6 +192,7 @@
     </scenes>
     <resources>
         <image name="bannerlogo" width="518" height="194"/>
+        <image name="barrel-water-bridge" width="550" height="440"/>
         <image name="camera" width="100" height="77"/>
     </resources>
 </document>
