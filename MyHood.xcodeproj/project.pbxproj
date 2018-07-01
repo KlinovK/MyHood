@@ -14,7 +14,8 @@
 		A992ED7E20E798330095BEB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A992ED7C20E798330095BEB9 /* LaunchScreen.storyboard */; };
 		A992ED8720E798D50095BEB9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992ED8620E798D50095BEB9 /* Post.swift */; };
 		A992ED8A20E7D2660095BEB9 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992ED8920E7D2660095BEB9 /* PostCell.swift */; };
-		A992ED8D20E815EC0095BEB9 /* AddPostVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992ED8C20E815EC0095BEB9 /* AddPostVCViewController.swift */; };
+		A992ED8D20E815EC0095BEB9 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992ED8C20E815EC0095BEB9 /* AddPostVC.swift */; };
+		A992ED9020E8B1920095BEB9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992ED8F20E8B1920095BEB9 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		A992ED7F20E798330095BEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A992ED8620E798D50095BEB9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A992ED8920E7D2660095BEB9 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		A992ED8C20E815EC0095BEB9 /* AddPostVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVCViewController.swift; sourceTree = "<group>"; };
+		A992ED8C20E815EC0095BEB9 /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		A992ED8F20E8B1920095BEB9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		A992ED7220E798320095BEB9 /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				A992ED8E20E8B1790095BEB9 /* Services */,
 				A992ED8B20E815B70095BEB9 /* Controller */,
 				A992ED8820E7D22F0095BEB9 /* View */,
 				A992ED8520E798B10095BEB9 /* Model */,
@@ -92,9 +95,17 @@
 			isa = PBXGroup;
 			children = (
 				A992ED7520E798320095BEB9 /* ViewController.swift */,
-				A992ED8C20E815EC0095BEB9 /* AddPostVCViewController.swift */,
+				A992ED8C20E815EC0095BEB9 /* AddPostVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A992ED8E20E8B1790095BEB9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A992ED8F20E8B1920095BEB9 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A992ED8720E798D50095BEB9 /* Post.swift in Sources */,
-				A992ED8D20E815EC0095BEB9 /* AddPostVCViewController.swift in Sources */,
+				A992ED8D20E815EC0095BEB9 /* AddPostVC.swift in Sources */,
 				A992ED7620E798320095BEB9 /* ViewController.swift in Sources */,
+				A992ED9020E8B1920095BEB9 /* DataService.swift in Sources */,
 				A992ED7420E798320095BEB9 /* AppDelegate.swift in Sources */,
 				A992ED8A20E7D2660095BEB9 /* PostCell.swift in Sources */,
 			);

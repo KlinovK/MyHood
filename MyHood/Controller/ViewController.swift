@@ -16,26 +16,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
+        DataService.instance.loadPosts()
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onPostsLoaded), name: NSNotification.Name(rawValue: "postsLoaded"), object: nil)
         
-        let post = Post(imagePath: "", title: "First title", description: "First Description")
-        let post1 = Post(imagePath: "", title: "First title1", description: "First Description1")
 
-        let post2 = Post(imagePath: "", title: "First title2", description: "First Description2")
-        
-        posts.append(post)
-        posts.append(post1)
-        posts.append(post2)
-        
+    }
+    
+   @objc func onPostsLoaded(){
         tableView.reloadData()
-
-        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             cell.configureCell(post)
             return cell
@@ -44,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     
     }
 
